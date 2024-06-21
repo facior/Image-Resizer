@@ -2,16 +2,17 @@
 [tool.briefcase]
 project_name = "ImageResizer"
 bundle = "image.resizer"
-version = "1.0.0"
-url = "https://github.com/facior"
+version = "1.1.0"
+url = "https://github.com/facior/Image-Resizer"
 license.file = "LICENSE"
 author = "Łukasz Kubieniec"
 author_email = "lukasz.kubieniec00@gmail.com"
 
 [tool.briefcase.app.ImageResizer]
 formal_name = "ImageResizer"
-description = "Image Resizer"
+description = "Image Resizer is simple app for resize the image written in Python"
 long_description = """More details about the app should go here.
+icon = "icons/logo"
 """
 sources = [
     "src/ImageResizer",
