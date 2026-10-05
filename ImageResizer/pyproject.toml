@@ -2,7 +2,7 @@
 [tool.briefcase]
 project_name = "ImageResizer"
 bundle = "image.resizer"
-version = "1.1.0"
+version = "2.2.0"
 url = "https://github.com/facior/Image-Resizer"
 license.file = "LICENSE"
 author = "Łukasz Kubieniec"
@@ -10,10 +10,12 @@ author_email = "lukasz.kubieniec00@gmail.com"
 
 [tool.briefcase.app.ImageResizer]
 formal_name = "ImageResizer"
-description = "Image Resizer is simple app for resize the image written in Python"
-long_description = """More details about the app should go here.
-icon = "icons/logo"
+description = "Resize, convert and compress images in batches"
+long_description = """Batch image resizer with presets, four resize modes (fit, fill and crop,
+exact, percentage), JPEG/PNG/WebP/BMP/GIF/TIFF output, quality control,
+EXIF handling and a live preview of the result.
 """
+icon = "src/ImageResizer/resources/logo"
 sources = [
     "src/ImageResizer",
 ]
@@ -22,7 +24,7 @@ test_sources = [
 ]
 
 requires = [
-    "pillow"
+    "pillow>=10.0",
 ]
 test_requires = [
     "pytest",
@@ -31,13 +33,13 @@ test_requires = [
 [tool.briefcase.app.ImageResizer.macOS]
 universal_build = true
 requires = [
-    "toga-cocoa~=0.4.5",
+    "toga-cocoa~=0.5.7",
     "std-nslog~=1.0.0",
 ]
 
 [tool.briefcase.app.ImageResizer.linux]
 requires = [
-    "toga-gtk~=0.4.5",
+    "toga-gtk~=0.5.7",
 ]
 
 [tool.briefcase.app.ImageResizer.linux.system.debian]
@@ -152,19 +154,19 @@ flatpak_sdk = "org.gnome.Sdk"
 
 [tool.briefcase.app.ImageResizer.windows]
 requires = [
-    "toga-winforms~=0.4.5",
+    "toga-winforms~=0.5.7",
 ]
 
 # Mobile deployments
 [tool.briefcase.app.ImageResizer.iOS]
 requires = [
-    "toga-iOS~=0.4.5",
+    "toga-iOS~=0.5.7",
     "std-nslog~=1.0.0",
 ]
 
 [tool.briefcase.app.ImageResizer.android]
 requires = [
-    "toga-android~=0.4.5",
+    "toga-android~=0.5.7",
 ]
 
 base_theme = "Theme.MaterialComponents.Light.DarkActionBar"
@@ -180,7 +182,7 @@ build_gradle_dependencies = [
 # Web deployments
 [tool.briefcase.app.ImageResizer.web]
 requires = [
-    "toga-web~=0.4.5",
+    "toga-web~=0.5.7",
 ]
 style_framework = "Shoelace v2.3"
 
