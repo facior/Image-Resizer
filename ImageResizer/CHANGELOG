@@ -1,5 +1,60 @@
 # ImageResizer Release Notes
 
+## 2.2.0 (5 Oct 2026)
+
+* Academic presets at the top of the list: presentation slide 16:9 and 4:3,
+  thesis / publication figure, conference poster graphic, Moodle / e-learning,
+  ID photo 35 × 45 mm. The Full HD preset was merged into "Presentation slide 16:9".
+* File size limit (e.g. 2 MB for upload systems): JPEG and WebP lower the
+  quality first (not below 40), then the resolution; other formats lower the
+  resolution. 1 MB = 1 000 000 bytes, so files also fit limits that use 1024 × 1024.
+* GPS location is removed by default even when other EXIF metadata is kept.
+  The summary says how many photos had their location removed.
+* Fix: decimal values typed with a comma ("0,5") on Polish Windows.
+
+## 2.1.0 (5 Oct 2026)
+
+* Polish language (Polski). The language follows Windows by default and can
+  be switched from the header; the window updates immediately and the image
+  list is kept. Menus, dialogs and error messages are translated too.
+* Polish plural forms and decimal commas (e.g. "3 obrazy · 1,0 MB").
+* The preview now scales with the window, so the app fits smaller screens.
+* The window opens centered on the screen.
+* Settings saved by 2.0.0 are migrated automatically.
+
+## 2.0.0 (5 Oct 2026)
+
+Complete rebuild.
+
+* Batch processing: add many images or whole folders (including subfolders),
+  with a progress bar and a Cancel button.
+* Drag and drop images or folders from Explorer (Windows).
+* Four resize modes: Fit within, Fill and crop, Exact size, Percentage.
+* Aspect ratio lock for exact sizes.
+* 14 presets: Full HD, 4K, web, email, Instagram, Facebook, YouTube, X, LinkedIn, avatars.
+* Output formats: JPEG, PNG, WebP, BMP, GIF, TIFF, or the original format.
+* Quality slider for JPEG and WebP.
+* Option to keep or strip EXIF metadata. Photos are rotated according to EXIF.
+* Configurable file name suffix and output folder. Existing files are never
+  overwritten unless you allow it.
+* Live preview of the result, including the crop.
+* Summary with total size savings and a shortcut to open the output folder.
+* Settings are remembered between sessions.
+* Keyboard shortcuts: Ctrl+O, Ctrl+Shift+O, Ctrl+R.
+* New flat design: teal and orange palette, card layout.
+
+Fixes:
+
+* Resizing used the 500 px preview thumbnail instead of the full-resolution image.
+* Crash when saving palette images (GIF) or images with transparency as JPEG.
+* Crash on zero or negative sizes and on file names without an extension.
+* Temporary preview files were never deleted.
+* The application icon was not set in packaged builds.
+
+## 1.1.0
+
+* Copyright notice and GitHub link.
+
 ## 0.0.1 (13 Jun 2024)
 
 * Initial release

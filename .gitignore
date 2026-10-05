@@ -1,0 +1,18 @@
+# Virtual environments
+.venv/
+venv/
+beeware-venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Briefcase output
+ImageResizer/build/
+ImageResizer/dist/
+ImageResizer/logs/
